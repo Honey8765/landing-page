@@ -15,9 +15,7 @@ html{
 }
 
 
-
 .navbar {
-  padding-top: 1rem;
   position: relative;
 }
 
@@ -66,7 +64,6 @@ html{
   font-size: 1.2rem;
   color: white;
   letter-spacing: 1.5px;
-  padding: 1rem;
 }
 
 .nav-menu li a{
@@ -99,7 +96,7 @@ html{
 
   .nav-menu li {
       display: inline-block;
-      padding: 0.5rem 0.7rem;
+      /* padding: 0.5rem 0.7rem; */
   }
 }
 
@@ -131,11 +128,11 @@ html{
 }
 
 .main_content_1_1 h1{
-  font-size: 50px;
+  font-size: 45px;
   font-weight: 600;
   letter-spacing: 2px;
   color: white;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 .main_content_1_1 h1 span{
@@ -145,6 +142,7 @@ html{
 .main_content_1_1 p {
   color: white;
   font-size: 20px;
+  max-width: 650px;
 }
 
 .main_content_1_1 button{
@@ -156,8 +154,9 @@ html{
 }
 
 .main_content_1_2{
-  /* width: 100%; */
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .main_content_1_2 video{
@@ -169,18 +168,18 @@ html{
   
 }
 
-.main_content_1_2 div{
+.main_content_1_2 div div{
   display: flex;
   justify-content: space-between;
   margin-top: 10px;
 }
 
-.main_content_1_2 div h6{
+.main_content_1_2 div div h6{
   max-width: 300px;
   color: white;
 }
 
-.main_content_1_2 div button{
+.main_content_1_2 div div button{
   background-color: black;
   color: white;
   width: 200px;
@@ -189,12 +188,34 @@ html{
   border: none;
 }
 
+#remove_1{
+  display: block;
+}
+
+#remove_2{
+  display: none;
+}
+
+
+
 @media (min-width: 768px) {
 
   .main_content_1_1 h3{
       padding-top: 100px;
   }    
 }
+@media (min-width: 1400px) {
+
+  #remove_1{
+    display: none;
+  }
+
+  #remove_2{
+      display: block;
+  }    
+}
+
+
 
 
 
@@ -338,10 +359,12 @@ html{
   width: 100px;
   height: 100px;
   background-color: gray;
-  top: 40px;
+  top: 140px;
   right: 40px;
 
   transition: 0.5s;
+  transform: rotatex(180deg);
+  transform-origin: top;
 }
 
 
@@ -364,7 +387,7 @@ html{
   transition: 0.5s;
 }
 
-.smartphone_content_1:hover{
+/* .smartphone_content_1:hover{
   height: 10px;
   background-color: white;
   
@@ -373,15 +396,15 @@ html{
 .smartphone_content_1:hover + .smartphone_content_2{
   color: white;
   background-color: grey;
-}
+} */
 
 .smartphone_content_2:hover{
   color: white;
   background-color: grey;
 }
 
-.smartphone_content_2:hover .smartphone_content_1{
-  height: 10px;
+.smartphone_content_2:hover + .smartphone_content_1{
+  height: 5px;
   background-color: white;
 }
 
@@ -812,40 +835,4 @@ html{
       float:right;
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 

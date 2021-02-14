@@ -6,13 +6,15 @@ toggleButton.addEventListener('click', toggleMenu)
 
 var word1 = ['Creativity', 'Passion', 'Art', 'Fans', 'Followers', 'Community']; 
 var word2 = ['$$$', '$$$', '$$$', 'Patrons', 'Patrons', '$$$']; 
-
+let cnt=0;
 var t = setInterval(function() { 
 
-  var randomNumber = Math.round( Math.random() * (word1.length-1) ); 
-
+  var randomNumber = cnt % (word1.length); 
   $('#change_word_1').html( word1[ randomNumber ] ); 
   $('#change_word_2').html( word2[ randomNumber ] ); 
+  $('#change_word_3').html( word1[ randomNumber ] ); 
+  $('#change_word_4').html( word2[ randomNumber ] ); 
+  cnt++;
 }, 500);
 
 
